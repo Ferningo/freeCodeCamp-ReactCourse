@@ -6,10 +6,17 @@ const Header = () => {
   );
 };
 
-function Page() {
+const Footer = () => {
   return (
-    <div>
-      <Header />
+    <footer>
+      <small>© 2021 Fernandez development. All rights reserved.</small>
+    </footer>
+  );
+};
+
+const Page = () => {
+  return (
+    <>
       <h1>Reasons I'm excited to learn React</h1>
       <ol>
         <li>
@@ -17,11 +24,18 @@ function Page() {
         </li>
         <li>I'm more likely to get a job as a developer if I know React</li>
       </ol>
-      <footer>
-        <small>© 2021 Fernandez development. All rights reserved.</small>
-      </footer>
-    </div>
+    </>
+  );
+};
+
+function FrontPage() {
+  return (
+    <>
+      <Header />
+      <Page />
+      <Footer />
+    </>
   );
 }
 
-ReactDOM.render(<Page />, document.getElementById("main-section"));
+ReactDOM.render(<FrontPage />, document.getElementById("main-section"));
